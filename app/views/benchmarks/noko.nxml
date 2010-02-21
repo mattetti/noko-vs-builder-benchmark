@@ -1,0 +1,18 @@
+xml.leaderboard :total        => @leaderboard.total_entries,
+                :row_start    => @leaderboard.row_start,
+                :row_end      => @leaderboard.row_end,
+                :page         => @leaderboard.current_page,
+                :total_pages  => @leaderboard.total_pages,
+                :type         => 123,
+                :game_type    => 'test' do
+  @leaderboard.stats.each do |leaderboard_stats|
+    xml.player leaderboard_stats.attributes
+  end
+  
+  xml.columns do
+    @leaderboard.columns.each do |column|
+      xml.column :name => column, :display_name => column
+    end  
+  end
+  
+end

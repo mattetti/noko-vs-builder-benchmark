@@ -1,0 +1,11 @@
+xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+  xml.player :name => 'matt', :id => 1
+  xml.player :name => 'pete', :id => 2
+  xml.player :name => 'james', :id => 3
+end

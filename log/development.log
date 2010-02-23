@@ -5168,3 +5168,1129 @@ Completed in 23ms (View: 14 | 200 OK [http://127.0.0.1/benchmarks/noko]
 Processing BenchmarksController#noko (for 127.0.0.1 at 2010-02-20 21:56:26) [GET]
 Rendering benchmarks/noko.nxml
 Completed in 23ms (View: 13 | 200 OK [http://127.0.0.1/benchmarks/noko]
+
+
+Processing BenchmarksController#noko (for ::1 at 2010-02-22 21:13:25) [GET]
+Rendering benchmarks/nokogiri.nxml
+Completed in 57ms (View: 47 | 200 OK [http://localhost/benchmarks/noko]
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:13:55) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:6: syntax error, unexpected tASSOC, expecting '}'
+                :type         => 123,
+                                ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:7: syntax error, unexpected keyword_do, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected keyword_end, expecting '}'
+                end       
+                   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10
+                :type         => 123,
+                :game_type    => 'test' do
+                  xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:6: syntax error, unexpected tASSOC, expecting '}'
+                :type         => 123,
+                                ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:7: syntax error, unexpected keyword_do, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected keyword_end, expecting '}'
+                end       
+                   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_end, expecting '}') on line #6 of app/views/benchmarks/nokogiri_small.nxml:
+3:                 :row_end      => 10,
+4:                 :page         => 4,
+5:                 :total_pages  => 10
+6:                 :type         => 123,
+7:                 :game_type    => 'test' do
+8:                   xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+9:                 end       
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (85.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:14:09) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+                  xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_end, expecting '}') on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test' do
+8:                   xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+9:                 end       
+10: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (82.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:15:04) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+                1.upto(5) do
+                  xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+                  end
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected tASSOC, expecting '}'
+...           xml.player {:name => 'matt', :nickname => 'mattet...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected ',', expecting '}'
+...   xml.player {:name => 'matt', :nickname => 'mattetti', :bl...
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected ',', expecting '}'
+...matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+...                               ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}') on line #9 of app/views/benchmarks/nokogiri_small.nxml:
+6:                 :type         => 123,
+7:                 :game_type    => 'test' do
+8:                 1.upto(5) do
+9:                   xml.player {:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}
+10:                   end
+11:                 end       
+12: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (82.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:15:22) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+                1.upto(5) do
+                  xml.player [{:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}]
+                  end
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}') on line #12 of app/views/benchmarks/nokogiri_small.nxml:
+9:                   xml.player [{:name => 'matt', :nickname => 'mattetti', :blog => 'merbist.com'}]
+10:                   end
+11:                 end       
+12: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (56.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:16:54) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+                1.upto(5) do
+                  xml.player "Matt"
+                  end
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}') on line #12 of app/views/benchmarks/nokogiri_small.nxml:
+9:                   xml.player "Matt"
+10:                   end
+11:                 end       
+12: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:17:00) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test' do
+                1.upto(5) do
+                  xml.player
+                  end
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}') on line #12 of app/views/benchmarks/nokogiri_small.nxml:
+9:                   xml.player
+10:                   end
+11:                 end       
+12: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:17:12) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_do_block, expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test',
+                1.upto(5) do
+                  xml.player
+                  end
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_do_block, expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:13: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:15: syntax error, unexpected keyword_end, expecting '}') on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test',
+8:                 1.upto(5) do
+9:                   xml.player
+10:                   end
+11:                 end       
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (83.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:17:44) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_do_block, expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+                end       
+                   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:14: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test',
+                (0..5).each do
+                  xml.player
+                end       
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_do_block, expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_end, expecting '}'
+                end       
+                   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:14: syntax error, unexpected keyword_end, expecting '}') on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test',
+8:                 (0..5).each do
+9:                   xml.player
+10:                 end       
+11: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:17:59) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected '\n', expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test',
+                (0..5).each{ xml.player }  
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected '\n', expecting tASSOC
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:10: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:12: syntax error, unexpected keyword_end, expecting '}') on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test',
+8:                 (0..5).each{ xml.player }  
+9: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (56.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:18:06) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+ERROR: compiling _run_nxml_app47views47benchmarks47nokogiri_small46nxml RAISED /Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _run_nxml_app47views47benchmarks47nokogiri_small46nxml(local_assigns)
+            old_output_buffer = output_buffer;;_set_controller_content_type(Mime::XML);xml = ::Nokogiri::XML::Builder.new { |xml|xml.leaderboard :total        => 100,
+                :row_start    => 1,
+                :row_end      => 10,
+                :page         => 4,
+                :total_pages  => 10,
+                :type         => 123,
+                :game_type    => 'test'
+end}.to_xml; self.output_buffer = xml;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/controllers/benchmarks_controller.rb:16:in `noko_small'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mattetti/.rip/active/lib/rack/head.rb:9:in `call'
+/Users/mattetti/.rip/active/lib/rack/methodoverride.rb:24:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/Users/mattetti/.rip/active/lib/rack/lock.rb:11:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:46:in `block in call'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `each'
+/Users/mattetti/.rip/active/lib/rack/urlmap.rb:40:in `call'
+/Users/mattetti/.rvm/gems/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mattetti/.rip/active/lib/rack/content_length.rb:13:in `call'
+/Users/mattetti/.rip/active/lib/rack/handler/webrick.rb:46:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:8: syntax error, unexpected keyword_end, expecting '}'
+end}.to_xml; self.output_buffer = xml;
+   ^
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:9: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/mattetti/Code/Sony/benchmarks/noko_vs_builder/app/views/benchmarks/nokogiri_small.nxml:11: syntax error, unexpected keyword_end, expecting '}') on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test'
+8: end
+
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (80.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:18:15) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 17ms (View: 8 | 200 OK [http://localhost/benchmarks/noko_small]
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:19:12) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+
+ActionView::TemplateError (Document already has a root node) on line #8 of app/views/benchmarks/nokogiri_small.nxml:
+5:                 :total_pages  => 10,
+6:                 :type         => 123,
+7:                 :game_type    => 'test'
+8:   xml.player :name => 'matt', :id => 1
+9:   xml.player :name => 'pete', :id => 2
+10:   xml.player :name => 'james', :id => 3
+
+    nokogiri (1.4.1) lib/nokogiri/xml/document.rb:146:in `add_child'
+    nokogiri (1.4.1) lib/nokogiri/xml/node.rb:395:in `parent='
+    nokogiri (1.4.1) lib/nokogiri/xml/builder.rb:346:in `insert'
+    nokogiri (1.4.1) lib/nokogiri/xml/builder.rb:338:in `method_missing'
+    app/views/benchmarks/nokogiri_small.nxml:8:in `block in _run_nxml_app47views47benchmarks47nokogiri_small46nxml'
+    nokogiri (1.4.1) lib/nokogiri/xml/builder.rb:263:in `initialize'
+    app/views/benchmarks/nokogiri_small.nxml:1:in `new'
+    app/views/benchmarks/nokogiri_small.nxml:1:in `_run_nxml_app47views47benchmarks47nokogiri_small46nxml'
+    app/controllers/benchmarks_controller.rb:16:in `noko_small'
+    <internal:prelude>:8:in `synchronize'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/mattetti/.rvm/ruby-1.9.1-p243/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BenchmarksController#noko_small (for ::1 at 2010-02-22 21:19:23) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 17ms (View: 8 | 200 OK [http://localhost/benchmarks/noko_small]
+
+
+Processing BenchmarksController#noko_small (for 127.0.0.1 at 2010-02-22 21:20:33) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 23ms (View: 12 | 200 OK [http://localhost/benchmarks/noko_small]
+
+
+Processing BenchmarksController#noko_small (for 127.0.0.1 at 2010-02-22 21:20:34) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 11ms (View: 1 | 200 OK [http://localhost/benchmarks/noko_small]
+
+
+Processing BenchmarksController#noko_small (for 127.0.0.1 at 2010-02-22 21:20:35) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 12ms (View: 1 | 200 OK [http://localhost/benchmarks/noko_small]
+
+
+Processing BenchmarksController#noko_small (for 127.0.0.1 at 2010-02-22 21:23:48) [GET]
+Rendering benchmarks/nokogiri_small.nxml
+Completed in 23ms (View: 12 | 200 OK [http://localhost/benchmarks/noko_small]

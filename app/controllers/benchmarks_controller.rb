@@ -1,14 +1,23 @@
-require 'nbuilder'
 class BenchmarksController < ApplicationController
   
   def noko
     @leaderboard = mock_leaderboard
-    render :template => 'benchmarks/noko.nxml'
+    render :template => 'benchmarks/nokogiri.nxml'
   end
   
   def builder
     @leaderboard = mock_leaderboard
     render :template => 'benchmarks/builder.rxml'
+  end
+  
+  def noko_small
+    @leaderboard = mock_leaderboard
+    render :template => 'benchmarks/nokogiri_small.nxml'
+  end
+  
+  def builder_small
+    @leaderboard = mock_leaderboard
+    render :template => 'benchmarks/builder_small.rxml'
   end
   
   Leaderboard   = Struct.new(:total_entries, :row_start, :row_end, :current_page, :total_pages, :columns, :stats )

@@ -1,6 +1,6 @@
 # Nokogiri vs Builder Rails benchmark app
 
-See http://railsontherun.com/2010/02/22/speed-up-your-rails-xml-reponses/
+See http://railsontherun.com/2010/02/22/speed-up-your-rails-xml-responses/
 
 Start the app and run the following benchmarks:
 
